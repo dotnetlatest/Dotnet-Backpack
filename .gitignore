@@ -1,1 +1,6 @@
 *.suo
+src/Backpack.Social/obj/
+src/Backpack.Extensions/obj/
+src/Backpack.IO/obj/
+src/Backpack.Web/obj/
+src/Backpack.Data/obj/

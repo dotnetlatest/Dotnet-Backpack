@@ -4,3 +4,6 @@ src/Backpack.Extensions/obj/
 src/Backpack.IO/obj/
 src/Backpack.Web/obj/
 src/Backpack.Data/obj/
+src/Backpack.MVC.Site/obj/
+*.cache
+src/Backpack.MVC.Site.Tests/obj/

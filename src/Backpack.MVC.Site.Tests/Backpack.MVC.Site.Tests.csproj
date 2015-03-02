@@ -88,6 +88,15 @@
   <ItemGroup>
     <Content Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backpack.MVC.Site\Backpack.MVC.Site.csproj">
+      <Project>{53367BE4-6D14-4497-B1A5-14F6F2798E9D}</Project>
+      <Name>Backpack.MVC.Site</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

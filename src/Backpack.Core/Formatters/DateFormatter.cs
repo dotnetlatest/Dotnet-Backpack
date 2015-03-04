@@ -1,7 +1,8 @@
-﻿// ************************************************** 
-// © Copyright 2015 WordFly. All Rights Reserved.                  
-//  Project: Backpack.Core
-//  **************************************************/    
+﻿/*
+ * -----------------------------------------------------------------
+ * © 2006-2015 MineCloud, Inc (http://www.minecloud.com)
+ * -----------------------------------------------------------------
+ */    
 
 using System;
 
@@ -27,7 +28,7 @@ namespace Backpack.Core.Formatters
         /// </summary>
         /// <param name="date">DateTime</param>
         /// <returns>DateTime</returns>
-        public static DateTime StripTime(DateTime date)
+        public static DateTime StripTime(this DateTime date)
         {
             return new DateTime(date.Year, date.Month, date.Day);
         }

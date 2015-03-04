@@ -10,3 +10,9 @@ src/Backpack.MVC.Site.Tests/obj/
 *.user
 src/_ReSharper.Dotnet-Backpack/
 src/Backpack.Core/obj/
+src/Backpack.Core.Tests/obj/
+src/Backpack.Extensions.Tests/bin/
+src/Backpack.Extensions.Tests/obj/
+src/Backpack.MVC.Site.Tests/bin/
+src/Backpack.Web.Tests/bin/
+src/Backpack.Web.Tests/obj/

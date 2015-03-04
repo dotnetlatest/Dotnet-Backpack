@@ -10,11 +10,11 @@ namespace Backpack.Core.Tests
         [TestMethod]
         public void DateTimeisStrippedOfTimeUnits()
         {
-           // var currentDateTime = DateTime.Now;
+            var sampleDateTime = new DateTime(2015, 1, 1, 12, 00, 0);
 
-          //  DateTime sut = currentDateTime.StripTime();
+            DateTime sut = sampleDateTime.StripTime();
 
-           // Assert.Equals(sut,)
+            Assert.AreNotSame(sampleDateTime,sut);
         }
     }
 }

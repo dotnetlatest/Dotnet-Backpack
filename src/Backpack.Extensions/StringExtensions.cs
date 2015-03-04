@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Minecloud.Extensions
+namespace Backpack.Extensions
 {
     public static class StringExtensions
     {

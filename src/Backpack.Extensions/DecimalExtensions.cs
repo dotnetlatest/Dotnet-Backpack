@@ -1,14 +1,13 @@
 ﻿// *******************************************************************
-// Minecloud
-// Copyright (c) 2013
+// Dotnet-Backpack
+// Copyright (c) 2015
 // All rights reserved.
-// Samuel Nimako-Mensah samuel@minecloud.com
-// Minecloud.Extensions
-// 11/14/2013
+// Dotnetlatest.com 
+// Backpack.Extensions
 // *******************************************************************
 
 
-namespace Minecloud.Extensions
+namespace Backpack.Extensions
 {
  
     public class DecimalExtensions

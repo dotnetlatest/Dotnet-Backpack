@@ -8,3 +8,5 @@ src/Backpack.MVC.Site/obj/
 *.cache
 src/Backpack.MVC.Site.Tests/obj/
 *.user
+src/_ReSharper.Dotnet-Backpack/
+src/Backpack.Core/obj/

@@ -1,0 +1,13 @@
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Backpack.WebApi.dll
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Backpack.WebApi.pdb
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Net.Http.Formatting.dll
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.dll
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.WebHost.dll
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Net.Http.Formatting.xml
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.xml
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.WebHost.xml
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.csprojResolveAssemblyReference.cache
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.dll
+C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.pdb

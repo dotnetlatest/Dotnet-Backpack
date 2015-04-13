@@ -11,3 +11,16 @@ C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.WebHos
 C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.csprojResolveAssemblyReference.cache
 C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.dll
 C:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.pdb
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Backpack.WebApi.dll
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Backpack.WebApi.pdb
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Newtonsoft.Json.dll
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Net.Http.Formatting.dll
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.dll
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.WebHost.dll
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\Newtonsoft.Json.xml
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Net.Http.Formatting.xml
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.xml
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\bin\Debug\System.Web.Http.WebHost.xml
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.csprojResolveAssemblyReference.cache
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.dll
+G:\Projects\Dotnet-Backpack\src\Backpack.WebApi\obj\Debug\Backpack.WebApi.pdb

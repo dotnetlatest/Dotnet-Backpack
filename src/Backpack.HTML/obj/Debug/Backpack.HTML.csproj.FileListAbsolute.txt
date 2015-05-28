@@ -1,0 +1,6 @@
+E:\Projects\Dotnet-Backpack\src\Backpack.HTML\bin\Backpack.HTML.dll.config
+E:\Projects\Dotnet-Backpack\src\Backpack.HTML\bin\Backpack.HTML.dll
+E:\Projects\Dotnet-Backpack\src\Backpack.HTML\bin\Backpack.HTML.pdb
+E:\Projects\Dotnet-Backpack\src\Backpack.HTML\obj\Debug\Backpack.HTML.csprojResolveAssemblyReference.cache
+E:\Projects\Dotnet-Backpack\src\Backpack.HTML\obj\Debug\Backpack.HTML.dll
+E:\Projects\Dotnet-Backpack\src\Backpack.HTML\obj\Debug\Backpack.HTML.pdb

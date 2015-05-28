@@ -33,6 +33,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backpack.Web.Tests", "Backp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backpack.Core.Tests", "Backpack.Core.Tests\Backpack.Core.Tests.csproj", "{22271B55-2100-401B-BD69-4C0C4125CF4B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backpack.HTML", "Backpack.HTML\Backpack.HTML.csproj", "{2A5EE887-B2A2-44E0-9272-4DCDBE23BCC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{74E11797-DBDF-4858-B51A-A8D956C65FD5}"
+	ProjectSection(SolutionItems) = preProject
+		..\docs\Code Review Cheat Sheet.md = ..\docs\Code Review Cheat Sheet.md
+		..\docs\Git Cheat Sheet.md = ..\docs\Git Cheat Sheet.md
+		..\docs\Integration Testing Guidelines.md = ..\docs\Integration Testing Guidelines.md
+		..\docs\Moq Cheat Sheet.md = ..\docs\Moq Cheat Sheet.md
+		..\docs\MVC Helpers Cheat sheet.md = ..\docs\MVC Helpers Cheat sheet.md
+		..\docs\ProjectOverview.md = ..\docs\ProjectOverview.md
+		..\docs\Resharper Cheat Sheet.md = ..\docs\Resharper Cheat Sheet.md
+		..\docs\SQL Cheat Sheet.md = ..\docs\SQL Cheat Sheet.md
+		..\docs\Unity Cheat Sheet.md = ..\docs\Unity Cheat Sheet.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +102,10 @@ Global
 		{22271B55-2100-401B-BD69-4C0C4125CF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22271B55-2100-401B-BD69-4C0C4125CF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22271B55-2100-401B-BD69-4C0C4125CF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5EE887-B2A2-44E0-9272-4DCDBE23BCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5EE887-B2A2-44E0-9272-4DCDBE23BCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5EE887-B2A2-44E0-9272-4DCDBE23BCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5EE887-B2A2-44E0-9272-4DCDBE23BCC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,5 +123,6 @@ Global
 		{250870FA-9AA0-4F91-B99F-EE71442CF957} = {2447066A-7B32-46E7-B6A6-7345B1646282}
 		{2427D109-9EBC-4BDC-A4B0-77B25F1A7E97} = {2447066A-7B32-46E7-B6A6-7345B1646282}
 		{22271B55-2100-401B-BD69-4C0C4125CF4B} = {2447066A-7B32-46E7-B6A6-7345B1646282}
+		{2A5EE887-B2A2-44E0-9272-4DCDBE23BCC5} = {AAC7A825-919C-4BE1-A862-AAE1D5D666C2}
 	EndGlobalSection
 EndGlobal

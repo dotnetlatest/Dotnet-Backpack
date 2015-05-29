@@ -9,27 +9,233 @@
     <script src="../_ui/js/npm.js"></script>
 </head>
 <body>
-    <h3>Input Types</h3>
     <div class="container-fluid">
+
         <div class="row">
-            <div class="col-lg-6">
+
+            <div class="col-lg-4 col-lg-offset-1">
+                <h3>Input Types</h3>
+
                 <form>
-                    User name:<br>
-                    <input type="text" name="username">
-                    <br>
-                    User password:<br>
-                    <input type="password" name="psw">
+                    <!-- Email Input-->
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                    <!-- Password Input-->
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <!-- File Input -->
+                    <div class="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" id="exampleInputFile">
+                        <p class="help-block">Example block-level help text here.</p>
+                    </div>
+                    <!-- Number Input -->
+                    <div class="form-group">
+                        <label for="exampleInputNumber">Quanity (between 1 and 5)</label>
+                        <input type="number" class="form-control" id="exampleInputNumber" min="1" max="5" />
+                    </div>
+                    <!-- Date Input -->
+                    <div class="form-group">
+                        <label for="exampleInputDate">Choose your pickup date</label>
+                        <input type="date" name="pickupdate" max="2015-01-02" class="form-control" id="exampleInputDate" />
+                    </div>
+                    <!-- DateTime Input -->
+                    <div class="form-group">
+                        <label for="exampleInputDateTime">Schedule a pickup</label>
+                        <input type="datetime" class="form-control" id="exampleInputDateTime" name="schedule_time" />
+                    </div>
 
-                    <br/>
-                    <input type="radio" name="sex" value="male" checked>Male
-                    <br>
-                    <input type="radio" name="sex" value="female">Female
+                    <!-- DateTime Local Input -->
+                    <div class="form-group">
+                        <label for="exampleInputDateTimeLocal">Select your Local Delivery Time </label>
+                        <input type="datetime-local" class="form-control" id="exampleInputDateTimeLocal" name="local_delivery" />
+                    </div>
 
-                    <br><br>
-                    <input type="submit" value="Submit">
+                    <!-- Color Input  -->
+                    <div class="form-group">
+                        <label for="exampleInputColor">Pick your favorite color</label>
+                        <input type="color" name="favcolor" class="form-control" id="exampleInputColor" />
+                    </div>
+                    <!-- Range Input -->
+                    <div class="form-group">
+                        <label for="exampleInputRange">Choose your range</label>
+                        <input type="range" name="pricerange" min="1" max="10" class="form-control" id="exampleInputRange" />
+                    </div>
+
+                    <!-- Month Input -->
+                    <div class="form-group">
+                        <label for="exampleInputMonth">Birthday (month & year)</label>
+                        <input type="month" class="form-control" id="exampleInputMonth" />
+                    </div>
+
+                    <!-- Week Input -->
+
+                    <div class="form-group">
+                        <label for="exampleInputWeek"> Select a week</label>
+                        <input type="week" class="form-control" id="exampleInputWeek" name="week_year" />
+                    </div>
+
+                    <!-- Time Input -->
+                    <div class="form-group">
+                        <label for="exampleInputTime">Sechdule a time</label>
+                        <input type="time" class="form-control" id="exampleInputTime" name="scheduledTime" />
+                    </div>
+
+                    <!-- Telephone Input -->
+                    <div class="form-group">
+                        <label for="exampleInputTelephone">PhoneNumber</label>
+                        <input type="tel" class="form-control" id="exampleInputTelephone" name="phonenumber" placeholder="123-456-7890" />
+                    </div>
+
+                    <!-- Url Input -->
+                    <div class="form-group">
+                        <label for="exampleInputUrl">Personal Website</label>
+                        <input type="url" class="form-control" id="exampleInputUrl" placeholder="http://www.example.com" />
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Check me out
+                        </label>
+                    </div>
+
+                    <!-- Text Area Input -->
+                    <div class="form-group">
+                        <label for="exampleInputTextArea"> Description</label>
+                        <textarea rows="4" cols="50" name="description" class="form-control" id="exampleInputTextArea">
+                            At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+                        </textarea>
+                    </div>
+
+
+                    <!-- Search -->
+
+                    <div class="form-group">
+                        <label for="exampleInputSearch">Search</label>
+                        <input type="search" placeholder="What are you looking for?" class="form-control" id="exampleInputSearch" name="googlesearch" />
+                    </div>
+                    <input type="submit" value="Submit" class="btn btn-default">
+                    <button type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
-            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+
+                <div class="row">&nbsp;</div>
+                <!-- Money Example -->
+                <div class="row">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                                <div class="input-group-addon">.00</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Transfer cash</button>
+                    </form>
+                </div>
+                <br />
+                <div class="row">
+                    <!-- Inline Invitation -->
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label for="exampleInputName2">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail2">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-default">Send invitation</button>
+                    </form>
+                </div>
+                <br />
+                <hr />
+                <div class="row">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Sign in</button>
+                    </form>
+                </div>
+                <br />
+                <hr />
+                <div class="row">
+
+                    <!-- Horizontal form -->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <br />
+                <hr />
+                <div class="row">
+                    <!-- Inline Checkboxes and Radio buttons -->
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                    </label>
+                </div>
+
+            </div>
         </div>
     </div>
 

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="DateTimeExtensions.cs" />
     <Compile Include="DecimalExtensions.cs" />
+    <Compile Include="EnumExtensions.cs" />
     <Compile Include="IEnumerable\CountsExactly.cs" />
     <Compile Include="IEnumerable\CountsMax.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

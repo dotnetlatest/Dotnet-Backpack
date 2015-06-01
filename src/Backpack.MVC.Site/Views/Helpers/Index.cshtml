@@ -1,0 +1,90 @@
+﻿<h2>HTML & Url Helpers</h2>
+
+
+
+<h3>HTML Helpers</h3>
+<div class="container-fluid">
+    @* Begin Action Link *@
+    <div class="row">
+        <div class="col-lg-12 lead well">ActionLink(s:linkText, s:actionName,o:routeValues) --- Writes an Anchor Tag to a link for a specfic action</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+       
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+       
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"@Html.ActionLink(""Products"", ""Create"", new RouteValueDictionary() { { ""UserId"",5 } })")
+                
+            </code>
+        </div>
+        
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@"<a href='/Helpers/Create?UserId=5'>Products</a>"))
+            </code>
+        </div>
+
+    </div>
+
+    
+    @* End Action Link *@
+    <br/>
+    @* Begin Text Box *@
+    <div class="row">
+        <div class="col-lg-12 lead well">TextBox(s:name, o:value,o:htmlAttributes) --- Returns a text input element</div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"@Html.TextBox(""Name"",null, new {Size = 40})")
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@"<input size='40' id='Name' name='Name' type='text' value=''>"))
+            </code>
+        </div>
+
+    </div>
+
+    <div class="row">
+        @* Text Box Email Input *@
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"@Html.TextBox(""Name"",null, new {Size = 40,type = email,placeholder = Enter Email})")
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@"<input size='40' id='Name' name='Name' placeholder='Enter Email' type='email' value="">"))
+            </code>
+        </div>
+
+    </div>
+
+    @* End Text Box *@
+</div>

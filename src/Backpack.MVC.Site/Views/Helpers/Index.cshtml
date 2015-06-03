@@ -1,45 +1,929 @@
 ﻿<h2>HTML & Url Helpers</h2>
-
+@model Backpack.MVC.Site.Models.HelperModel
 
 
 <h3>HTML Helpers</h3>
 <div class="container-fluid">
-    @* Begin Action Link *@
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12 lead well">ActionLink(s:linkText, s:actionName,o:routeValues) --- Writes an Anchor Tag to a link for a specfic action</div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"@Html.ActionLink(""Products"", ""Create"", new RouteValueDictionary() { { ""UserId"",5 } })")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@"<a href='/Helpers/Create?UserId=5'>Products</a>"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead ">AntiForgeryToken(s:salt, s:domain, s:path)</p>
+                <span>Generates a hidden form field (anti-forgery token) that is validated when the form is submitted.</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"@Html.AntiForgeryToken()")
+
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@"<input name='__RequestVerificationToken' type='hidden'
+                                        value='8nyX2HUDlndyJWEneds7tmxZgPeGyKQrx00JZ-BvwnW0C3tPrTkodtJBJvb3u63oparOrN-0J-oAlhFmAa3x1ouYmCBd6GiFdVhluA7DmDw1'>"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead"> AttributeEncode(s:input)</p>
+                <p>HTML-encodes the string (as an attribute).</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    
+                    @Html.Raw(@"@Html.AttributeEncode(""& welcome"")")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@" &amp; welcome"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead">BeginForm(s:action, s:controller, o:values) </p>
+                <p>Writes and opening form tag to the response</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+
+                    @Html.Raw(@"@using (Html.BeginForm(""Upload"", ""Upload"", FormMethod.Post,
+                                      new { enctype = ""multipart/form-data"" }))
+                    {
+                    
+                    }")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@"<form action='/Upload/Upload' enctype='multipart/form-data' method='post'>  </form>'"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead"> BeginRouteForm(s:routeName)</p>
+                <p>Writes an opening form tag for the route</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"@using (Html.BeginRouteForm(""Default"", FormMethod.Post,
+                                      new { enctype = ""multipart/form-data"" }))
+                    {
+
+                    }")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@"<form action='/Home/Index' enctype='multipart/form-data' method='post'>  </form>'"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead">CheckBox(s:name, b:checked) </p>
+                <p>Returns a check box input element</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+
+
+                    @Html.Raw(@"@Html.CheckBox(""AcceptTerms"",false)")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@"<input id=""AcceptTerms"" name=""AcceptTerms"" type=""checkbox"" value=""true"">
+                                        <input name=""AcceptTerms"" type=""hidden"" value=""false"">"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+        @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead"> CheckBoxFor(e:expression)</p>
+                <p>Retuns a check box input elment for the model</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    
+                    @Html.Raw(@"@Html.CheckBoxFor(m => m.AcceptTerms, new { @checked = ""checked"" })")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@"<input checked=""checked"" data-val=""true"" data-val-required=""The AcceptTerms field is required."" id=""AcceptTerms"" name=""AcceptTerms"" type=""checkbox"" value=""true"">
+
+<input name=""AcceptTerms"" type=""hidden"" value=""false"">"))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+    @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead">DropDownList(s:name, list:selectlistitems) </p>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@""))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+    @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead">DropDownListFor(e:expression, list:selectlistitems) </p>
+                <p>Returns a seingle-selection select element for the model</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@""))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+    @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead">Encode(s:input) </p>
+                <p>HTML-encodes the string</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@""))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+    <section>
+    @* Begin *@
+        <div class="row">
+            <div class="col-lg-12  well">
+                <p class="lead">EndForm() </p>
+                <p>Renders the closing form tag to the response</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label>Method</label>
+            </div>
+
+            <div class="col-lg-6">
+                <label>Output</label>
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(@"")
+
+                </code>
+            </div>
+
+            <div class="col-lg-6">
+                <code>
+                    @Html.Raw(Html.Encode(@""))
+                </code>
+            </div>
+
+        </div>
+        @* End *@
+        <br />
+    </section>
+
+<section>
+        @* Begin *@
     <div class="row">
-        <div class="col-lg-12 lead well">ActionLink(s:linkText, s:actionName,o:routeValues) --- Writes an Anchor Tag to a link for a specfic action</div>
+        <div class="col-lg-12  well">
+            <p class="lead">Hidden(s:name,o:value) </p>
+            <p>Retuns a hidden input element</p>
+        </div>
     </div>
 
     <div class="row">
         <div class="col-lg-6">
             <label>Method</label>
         </div>
-       
+
         <div class="col-lg-6">
             <label>Output</label>
         </div>
 
     </div>
     <div class="row">
-       
+
         <div class="col-lg-6">
             <code>
-                @Html.Raw(@"@Html.ActionLink(""Products"", ""Create"", new RouteValueDictionary() { { ""UserId"",5 } })")
-                
+                @Html.Raw(@"")
+
             </code>
         </div>
-        
+
         <div class="col-lg-6">
             <code>
-                @Html.Raw(Html.Encode(@"<a href='/Helpers/Create?UserId=5'>Products</a>"))
+                @Html.Raw(Html.Encode(@""))
             </code>
         </div>
 
     </div>
-
-    
-    @* End Action Link *@
+    @* End *@
     <br/>
-    @* Begin Text Box *@
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">HiddenFor(e:expression) </p>
+            <p >Returns a hidden input element for the model</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">ListBox(s:name,list:selectedListItems) </p>
+            <p >Returns a multi-select select element</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead"> ListBoxFor(e:expression, list:selectlistitems) </p>
+            <p >Returns a multi-select element for the model</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">Password(s:name,o:value) </p>
+            <p >Returns a password input element</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">PasswordFor(e:expression)</p>
+            <p >Returns a password input element for the model </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">RadioButton(s:name,o:value,b:checked) </p>
+            <p >Returns a radio button input element</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">RadioButtonFor(e:expression) </p>
+            <p >Returns a radio button element for the model </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">Partial(s:name,o:model) </p>
+            <p >Returns a Partial View(.cshtml)</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">RouteLink(s:text,s:routeName) </p>
+            <p >Retuns an anchor element that contains the virtual path of the specified path</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">TextArea(s:name,s:value) </p>
+            <p >Retuns the specified textarea element</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">TextAreaFor(e:expression) </p>
+            <p >Returns the specified textarea element for the model</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+    <br/>
+</section>
+
+
+<section>
+    @* Begin *@
     <div class="row">
         <div class="col-lg-12 lead well">TextBox(s:name, o:value,o:htmlAttributes) --- Returns a text input element</div>
     </div>
@@ -71,7 +955,7 @@
     </div>
 
     <div class="row">
-        @* Text Box Email Input *@
+    @* Text Box Email Input *@
         <div class="col-lg-6">
             <code>
                 @Html.Raw(@"@Html.TextBox(""Name"",null, new {Size = 40,type = email,placeholder = Enter Email})")
@@ -85,6 +969,47 @@
         </div>
 
     </div>
+    @* End *@
+    <br />
+</section>
 
-    @* End Text Box *@
+<section>
+    @* Begin *@
+    <div class="row">
+        <div class="col-lg-12  well">
+            <p class="lead">TextBoxFor(e:expression) </p>
+            <p >Returns the input textbox for the specified model</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <label>Method</label>
+        </div>
+
+        <div class="col-lg-6">
+            <label>Output</label>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(@"")
+
+            </code>
+        </div>
+
+        <div class="col-lg-6">
+            <code>
+                @Html.Raw(Html.Encode(@""))
+            </code>
+        </div>
+
+    </div>
+    @* End *@
+                    <br />
+    </section>
+
 </div>

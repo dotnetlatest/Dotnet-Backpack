@@ -11,6 +11,7 @@
     @Html.ValidationSummary()
     <p>Your Name: @Html.EditorFor(m => m.ClientName)</p>
     <p>Appointment Date: @Html.EditorFor(m => m.Date)</p>
+    @*<p>Category:  @Html.DropDownList(ViewBag.MovieType)</p>*@
     <p>@Html.EditorFor(m => m.TermsAccepted) I accept the terms & conditions</p>
     <input type="submit" value="Make Booking" />
 }

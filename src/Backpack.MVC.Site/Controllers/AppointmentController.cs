@@ -18,6 +18,20 @@ namespace Backpack.MVC.Site.Controllers
 
         public ViewResult MakeBooking()
         {
+            List<SelectListItem> items = new List<SelectListItem>
+            {
+                new SelectListItem {Text = "Action", Value = "0"},
+                new SelectListItem {Text = "Drama", Value = "1"},
+                new SelectListItem {Text = "Comedy", Value = "2", Selected = true},
+                new SelectListItem {Text = "Science Fiction", Value = "3"}
+            };
+
+
+
+
+
+            ViewBag.MovieType = items;
+
             return View(new Appointment {Date = DateTime.Now});
         }
 

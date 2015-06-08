@@ -235,6 +235,8 @@
     <Content Include="Views\Appointment\MakeBooking.cshtml" />
     <None Include="Views\Appointment\Completed.cshtml" />
     <Content Include="Views\Helpers\Index.cshtml" />
+    <Content Include="Views\Home\SelectCategory.cshtml" />
+    <Content Include="Views\Home\CategoryChosen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

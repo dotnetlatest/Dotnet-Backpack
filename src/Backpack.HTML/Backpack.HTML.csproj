@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GoogleVisualizations\Charts\piechart.html" />
     <Content Include="_ui\css\bootstrap-theme.css" />
     <Content Include="_ui\css\bootstrap-theme.min.css" />
     <Content Include="_ui\css\bootstrap.css" />

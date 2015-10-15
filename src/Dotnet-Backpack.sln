@@ -38,6 +38,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{74E11797-DBDF-4858-B51A-A8D956C65FD5}"
 	ProjectSection(SolutionItems) = preProject
 		..\docs\Code Review Cheat Sheet.md = ..\docs\Code Review Cheat Sheet.md
+		DataVisualization.md = DataVisualization.md
 		..\docs\Git Cheat Sheet.md = ..\docs\Git Cheat Sheet.md
 		..\docs\Integration Testing Guidelines.md = ..\docs\Integration Testing Guidelines.md
 		..\docs\Moq Cheat Sheet.md = ..\docs\Moq Cheat Sheet.md

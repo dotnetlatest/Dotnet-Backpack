@@ -5,6 +5,8 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
+using Backpack.Core.Logging;
 
 namespace Backpack.WebApi.Security
 {
@@ -22,7 +24,7 @@ namespace Backpack.WebApi.Security
         private const int ExpectedCredentialCount = 2;
 
         private readonly IBasicSecurityService _basicSecurityService;
-        private readonly Logger _log = LogManager.GetCurrentClassLogger();
+        private readonly Log _log = Log.Get();
 
         public BasicAuthenticationMessageHandler(IBasicSecurityService basicSecurityService)
         {
@@ -70,7 +72,7 @@ namespace Backpack.WebApi.Security
         {
             return (request.Headers != null
             && request.Headers.Authorization != null
-            && request.Headers.Authorization.Scheme.ToLowerInvariant() == Constants.SchemeTypes.Basic);
+            && request.Headers.Authorization.Scheme.ToLowerInvariant() == "basic");
         }
 
         /// <summary>
@@ -111,7 +113,7 @@ namespace Backpack.WebApi.Security
         public HttpResponseMessage CreateUnauthorizedResponse()
         {
             var response = new HttpResponseMessage(HttpStatusCode.Unauthorized);
-            response.Headers.WwwAuthenticate.Add(new AuthenticationHeaderValue(Constants.SchemeTypes.Basic));
+            response.Headers.WwwAuthenticate.Add(new AuthenticationHeaderValue("basic"));
             return response;
         }
 

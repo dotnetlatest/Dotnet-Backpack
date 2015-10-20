@@ -9,12 +9,14 @@ namespace Backpack.MVC.Site.Controllers
     public class HelpersController : Controller
     {
         // GET: Helpers
+        [Route("mvc-helpers")]
         public ActionResult Index()
         {
             return View();
         }
 
         // GET: Helpers/Details/5
+        [Route("helpers/{id}")]
         public ActionResult Details(int id)
         {
             return View();
@@ -22,7 +24,7 @@ namespace Backpack.MVC.Site.Controllers
 
         // GET: Helpers/Create
         public ActionResult Create()
-        {
+        {       
             return View();
         }
 

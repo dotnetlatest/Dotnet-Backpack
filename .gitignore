@@ -17,3 +17,4 @@ src/Backpack.MVC.Site.Tests/bin/
 src/Backpack.Web.Tests/bin/
 src/Backpack.Web.Tests/obj/
 src/Backpack.Core.Tests/bin/Debug/
+*.dll

@@ -78,6 +78,7 @@
     <Compile Include="Extensions\HtmlExtensions.cs" />
     <Compile Include="Extensions\UrlExtensions.cs" />
     <Compile Include="FieldDescription.cs" />
+    <Compile Include="Filters\TimingFilter.cs" />
     <Compile Include="LabelTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

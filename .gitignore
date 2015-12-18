@@ -1,13 +1,15 @@
 *.suo
+*.dll
+*.pdb
+*.cache
+*.user
 src/Backpack.Social/obj/
 src/Backpack.Extensions/obj/
 src/Backpack.IO/obj/
 src/Backpack.Web/obj/
 src/Backpack.Data/obj/
 src/Backpack.MVC.Site/obj/
-*.cache
 src/Backpack.MVC.Site.Tests/obj/
-*.user
 src/_ReSharper.Dotnet-Backpack/
 src/Backpack.Core/obj/
 src/Backpack.Core.Tests/obj/
@@ -16,6 +18,6 @@ src/Backpack.Extensions.Tests/obj/
 src/Backpack.MVC.Site.Tests/bin/
 src/Backpack.Web.Tests/bin/
 src/Backpack.Web.Tests/obj/
-src/Backpack.Core.Tests/bin/Debug/
-*.dll
+src/Backpack.Core.Tests/bin/
+
 *.pdb

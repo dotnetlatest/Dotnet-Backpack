@@ -172,6 +172,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\NorthwindShop\Controllers\PortalController.cs" />
     <Compile Include="Areas\NorthwindShop\NorthwindShopAreaRegistration.cs" />
+    <Compile Include="Areas\TimingSelector\Controllers\StarterController.cs" />
+    <Compile Include="Areas\TimingSelector\TimingSelectorAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AppointmentController.cs" />
     <Compile Include="Controllers\HelpersController.cs" />
@@ -204,6 +206,8 @@
     <Content Include="Areas\NorthwindShop\Views\Shared\Error.cshtml" />
     <Content Include="Areas\NorthwindShop\Views\Shared\Lockout.cshtml" />
     <Content Include="Areas\NorthwindShop\Views\Portal\Index.cshtml" />
+    <Content Include="Areas\TimingSelector\Views\web.config" />
+    <Content Include="Areas\TimingSelector\Views\Starter\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -262,6 +266,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\NorthwindShop\Models\" />
+    <Folder Include="Areas\TimingSelector\Models\" />
+    <Folder Include="Areas\TimingSelector\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
